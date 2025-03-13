@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Essential travel tips and advice from Wanderlust Adventures. Learn about trip planning, packing guides, safety tips, budgeting, and more for your next adventure.">
+    <meta name="keywords" content="travel tips, trip planning, packing guide, travel safety, budget travel, travel advice, vacation planning, travel hacks, travel guide, travel resources">
+    
+    <title>Travel Tips - Essential Advice by Wanderlust Adventures</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <style>
+        
+        .quick-tips-nav {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .quick-nav-link {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            position: relative;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .quick-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.3s ease;
+        }
+
+        .quick-nav-link:hover {
+            color: #007bff;
+        }
+
+        .quick-nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/wanderlust-logo.jpg" alt="Wanderlust Adventures Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="tips.html" id="active">Travel Tips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/travel-tips-hero.jpg" alt="Travel essentials laid out" class="hero-image">
+            <h1>Essential Travel Tips</h1>
+            <p class="hero-subtitle">Your Guide to Smarter Travel</p>
+        </section>
+
+        <section class="tips-categories">
+            <h2>Quick Navigation</h2>
+            <nav class="quick-tips-nav">
+                <a href="#planning" class="quick-nav-link">Planning</a>
+                <a href="#packing" class="quick-nav-link">Packing</a>
+                <a href="#transportation" class="quick-nav-link">Transportation</a>
+                <a href="#safety" class="quick-nav-link">Safety</a>
+                <a href="#budget" class="quick-nav-link">Budget</a>
+            </nav>
+        </section>
+
+        <section id="planning" class="tip-section">
+            <h2>Trip Planning Essentials</h2>
+            <div class="planning-intro">
+                <img src="https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg" 
+                     alt="Travel planning with map and compass" 
+                     style="float: left; margin: 0 20px 20px 0; width: 300px; border-radius: 8px;">
+                <p style="margin-bottom: 15px;">Planning your next adventure requires careful consideration and preparation. Whether you're embarking on a short weekend getaway or a long-term journey around the world, proper planning can make the difference between a stressful experience and an unforgettable adventure. Our expert travel planners have compiled essential tips to help you create the perfect itinerary.</p>
+                <p style="margin-bottom: 15px;">Remember that flexibility is key when traveling. While it's important to have a plan, leaving room for spontaneous discoveries often leads to the most memorable experiences. Consider factors like local festivals, weather patterns, and peak tourist seasons when choosing your travel dates.</p>
+            </div>
+
+            <section class="tips-grid">
+                <article class="tip-card">
+                    <h3>Best Time to Travel</h3>
+                    <ul class="tip-list">
+                        <li>Research destination's peak and off-peak seasons</li>
+                        <li>Check weather patterns and local events</li>
+                        <li>Consider booking during shoulder season</li>
+                        <li>Look for special festivals or events</li>
+                    </ul>
+                </article>
+
+                <article class="tip-card">
+                    <h3>Documentation</h3>
+                    <ul class="tip-list">
+                        <li>Check passport validity (6 months minimum)</li>
+                        <li>Research visa requirements</li>
+                        <li>Make copies of important documents</li>
+                        <li>Store digital copies securely</li>
+                    </ul>
+                </article>
+
+                <article class="tip-card">
+                    <h3>Accommodation Tips</h3>
+                    <ul class="tip-list">
+                        <li>Book in advance for better rates</li>
+                        <li>Read recent reviews carefully</li>
+                        <li>Check location and accessibility</li>
+                        <li>Consider alternative accommodations</li>
+                    </ul>
+                </article>
+            </section>
+        </section>
+
+        <section id="packing" class="tip-section">
+            <h2>Smart Packing Guide</h2>
+            <section class="packing-essentials">
+                <article class="checklist-card">
+                    <h3>Essential Packing Checklist</h3>
+                    <form class="packing-checklist">
+                        <label><input type="checkbox"> Travel Documents</label>
+                        <label><input type="checkbox"> Medications</label>
+                        <label><input type="checkbox"> Universal Adapter</label>
+                        <label><input type="checkbox"> Basic First Aid Kit</label>
+                        <label><input type="checkbox"> Weather-Appropriate Clothing</label>
+                        <label><input type="checkbox"> Comfortable Walking Shoes</label>
+                        <label><input type="checkbox"> Phone & Chargers</label>
+                        <label><input type="checkbox"> Travel Insurance Documents</label>
+                    </form>
+                </article>
+            </section>
+        </section>
+
+        <section id="transportation" class="tip-section">
+            <h2>Transportation Guide</h2>
+            <table class="transport-comparison">
+                <caption>Transportation Options Comparison</caption>
+                <thead>
+                    <tr>
+                        <th>Mode</th>
+                        <th>Cost</th>
+                        <th>Speed</th>
+                        <th>Comfort</th>
+                        <th>Flexibility</th>
+                        <th>Environmental Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Train</td>
+                        <td>Medium</td>
+                        <td>Fast</td>
+                        <td>High</td>
+                        <td>Medium</td>
+                        <td>Low</td>
+                    </tr>
+                    <tr>
+                        <td>Bus</td>
+                        <td>Low</td>
+                        <td>Slow</td>
+                        <td>Medium</td>
+                        <td>Medium</td>
+                        <td>Low</td>
+                    </tr>
+                    <tr>
+                        <td>Plane</td>
+                        <td>High</td>
+                        <td>Fastest</td>
+                        <td>Medium</td>
+                        <td>Low</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>Car Rental</td>
+                        <td>High</td>
+                        <td>Medium</td>
+                        <td>High</td>
+                        <td>High</td>
+                        <td>Medium</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="safety" class="tip-section">
+            <h2>Safety Guidelines</h2>
+            <section class="safety-grid">
+                <article class="safety-card">
+                    <h3>Personal Safety</h3>
+                    <ul class="safety-list">
+                        <li>Keep important documents safe</li>
+                        <li>Stay aware of your surroundings</li>
+                        <li>Have travel insurance</li>
+                        <li>Know emergency numbers</li>
+                        <li>Share itinerary with family</li>
+                    </ul>
+                </article>
+
+                <article class="safety-card">
+                    <h3>Health Precautions</h3>
+                    <ul class="safety-list">
+                        <li>Check required vaccinations</li>
+                        <li>Carry basic medications</li>
+                        <li>Stay hydrated</li>
+                        <li>Be careful with street food</li>
+                    </ul>
+                </article>
+            </section>
+        </section>
+
+        <section id="budget" class="tip-section">
+            <h2>Budget Travel Tips</h2>
+            <section class="budget-tips">
+                <article class="budget-card">
+                    <h3>Money-Saving Strategies</h3>
+                    <ul class="budget-list">
+                        <li>Book flights in advance</li>
+                        <li>Use public transportation</li>
+                        <li>Cook some meals yourself</li>
+                        <li>Look for free activities</li>
+                        <li>Travel during off-peak seasons</li>
+                    </ul>
+                </article>
+
+                <article class="budget-calculator">
+                    <h3>Daily Budget Calculator</h3>
+                    <form class="calculator-form">
+                        <label>Accommodation
+                            <input type="number" placeholder="$ per night">
+                        </label>
+                        <label>Food
+                            <input type="number" placeholder="$ per day">
+                        </label>
+                        <label>Transportation
+                            <input type="number" placeholder="$ per day">
+                        </label>
+                        <label>Activities
+                            <input type="number" placeholder="$ per day">
+                        </label>
+                        <button type="button" class="calculate-btn" style="margin-top: 1rem;width: 100%;">Calculate Total</button>
+                    </form>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-content">
+            <article class="footer-section">
+                <h4>Contact Us</h4>
+                <address>
+                    <p>123 Travel Street</p>
+                    <p>New York, NY 10001</p>
+                    <p>Email: info@wanderlust.com</p>
+                    <p>Tel: +1 (234) 567-890</p>
+                </address>
+            </article>
+
+            <article class="footer-section">
+                <h4>Follow Us</h4>
+                <nav class="social-nav">
+                    <ul>
+                        <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+                        <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></li>
+                        <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+                    </ul>
+                </nav>
+            </article>
+        </section>
+        
+        <section class="footer-bottom">
+            <p>Copyright &copy; <time datetime="2025">2025</time> Wanderlust Adventures. All rights reserved.</p>
+        </section>
+    </footer>
+
+    <script>
+        // Simple calculator functionality
+        document.querySelector('.calculate-btn').addEventListener('click', () => {
+            let total = 0;
+            document.querySelectorAll('.calculator-form input').forEach(input => {
+                total += Number(input.value) || 0;
+            });
+            alert(`Estimated daily budget: $${total}`);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('.quick-nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
