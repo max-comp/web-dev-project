@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
@@ -59,7 +60,7 @@
 
         <section class="contact-form">
             <h2>Send us a Message</h2>
-            <form id="contactForm" class="enhanced-form">
+            <form id="contactForm" class="enhanced-form" action="contact.html" method="get">
                 <fieldset>
                     <legend>Your Information</legend>
                     
@@ -178,9 +179,9 @@
                 <h4>Follow Us</h4>
                 <nav class="social-nav">
                     <ul>
-                        <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
-                        <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></li>
-                        <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a></li>
                     </ul>
                 </nav>
             </article>
@@ -196,40 +197,31 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
     <script>
-
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const displayContent = document.querySelector('.display-content');
-            let displayHTML = '';
-
-            formData.forEach((value, key) => {
-                if (key === 'newsletter') {
-                    value = value === 'on' ? 'Yes' : 'No';
-                }
-                displayHTML += `<p><strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}</p>`;
-            });
-
-            displayContent.innerHTML = displayHTML;
-            document.getElementById('formDisplay').style.display = 'block';
-        });
-
-
-        document.querySelector('.chat-button').addEventListener('click', function() {
-            alert('Live chat feature coming soon!');
-        });
-
-
+        // Display form values from URL parameters when page loads
         window.onload = function() {
+            // Parse URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
             
+            // If there are parameters, display them
+            if (urlParams.toString()) {
+                const displayContent = document.querySelector('.display-content');
+                let displayHTML = '';
+                
+                urlParams.forEach((value, key) => {
+                    displayHTML += `<p><strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}</p>`;
+                });
+                
+                displayContent.innerHTML = displayHTML;
+                document.getElementById('formDisplay').style.display = 'block';
+            }
+            
+            // Initialize maps
             const nyMap = L.map('map-ny').setView([40.7128, -74.0060], 15);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '© OpenStreetMap contributors'
             }).addTo(nyMap);
             L.marker([40.7128, -74.0060]).addTo(nyMap)
                 .bindPopup('New York Office<br>123 Travel Street');
-
             
             const londonMap = L.map('map-london').setView([51.5074, -0.1278], 15);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -237,7 +229,6 @@
             }).addTo(londonMap);
             L.marker([51.5074, -0.1278]).addTo(londonMap)
                 .bindPopup('London Office<br>456 Adventure Road');
-
             
             const sydneyMap = L.map('map-sydney').setView([-33.8688, 151.2093], 15);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -246,6 +237,10 @@
             L.marker([-33.8688, 151.2093]).addTo(sydneyMap)
                 .bindPopup('Sydney Office<br>789 Journey Lane');
         };
+
+        document.querySelector('.chat-button').addEventListener('click', function() {
+            alert('Live chat feature coming soon!');
+        });
     </script>
 </body>
 </html> 
