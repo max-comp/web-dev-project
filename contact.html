@@ -191,12 +191,12 @@
         </section>
     </footer>
 
-    <!-- Add Leaflet CSS and JS -->
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
     <script>
-        // Form submission handler
+
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -215,14 +215,14 @@
             document.getElementById('formDisplay').style.display = 'block';
         });
 
-        // Live chat button functionality
+
         document.querySelector('.chat-button').addEventListener('click', function() {
             alert('Live chat feature coming soon!');
         });
 
-        // Initialize maps when the page loads
+
         window.onload = function() {
-            // New York office
+            
             const nyMap = L.map('map-ny').setView([40.7128, -74.0060], 15);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '© OpenStreetMap contributors'
@@ -230,7 +230,7 @@
             L.marker([40.7128, -74.0060]).addTo(nyMap)
                 .bindPopup('New York Office<br>123 Travel Street');
 
-            // London office
+            
             const londonMap = L.map('map-london').setView([51.5074, -0.1278], 15);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '© OpenStreetMap contributors'
@@ -238,7 +238,7 @@
             L.marker([51.5074, -0.1278]).addTo(londonMap)
                 .bindPopup('London Office<br>456 Adventure Road');
 
-            // Sydney office
+            
             const sydneyMap = L.map('map-sydney').setView([-33.8688, 151.2093], 15);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '© OpenStreetMap contributors'
