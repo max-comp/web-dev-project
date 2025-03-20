@@ -197,12 +197,12 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
     <script>
-        // Display form values from URL parameters when page loads
+        
         window.onload = function() {
-            // Parse URL parameters
+            
             const urlParams = new URLSearchParams(window.location.search);
             
-            // If there are parameters, display them
+            
             if (urlParams.toString()) {
                 const displayContent = document.querySelector('.display-content');
                 let displayHTML = '';
@@ -215,7 +215,7 @@
                 document.getElementById('formDisplay').style.display = 'block';
             }
             
-            // Initialize maps
+            //////// MAPS ////////
             const nyMap = L.map('map-ny').setView([40.7128, -74.0060], 15);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '© OpenStreetMap contributors'
