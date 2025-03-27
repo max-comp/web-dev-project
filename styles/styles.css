@@ -98,18 +98,21 @@ main {
 }
 
 .hero h1 {
+    margin-top: 1rem;
     font-size: 3rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     margin-bottom: 1rem;
     padding: 0 1rem;
     position: relative;
-    z-index: 1;
+    z-index: -1;
     background-color: rgba(0,0,0,0.3);
     padding: 0.5rem 1rem;
     border-radius: 4px;
 }
 
 .hero-subtitle {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     font-size: 1.5rem;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     position: relative;
@@ -183,6 +186,18 @@ article, section {
 article h2, section h2 {
     margin-bottom: 1rem;
     color: #333;
+}
+
+.destination-card img {
+    width: 70vw;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.experience-card{
+    width: 70vw;
+    height: 50vh;
+    object-fit: cover;
 }
 
 aside {
@@ -269,13 +284,6 @@ button:hover {
     margin-left: 3px;
 }
 
-.form-display {
-    margin-top: 2rem;
-    padding: 1rem;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -321,6 +329,7 @@ img {
 .video-container {
     max-width: 1000px;
     margin: 0 auto;
+    margin-top: auto;
     padding: 0 1rem;
     position: relative;
     overflow: hidden;
@@ -336,6 +345,8 @@ img {
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 
